@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icon.ico" />
+    <None Remove="Images\start.png" />
+    <None Remove="Images\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.72" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="OpenQA.Selenium.Chrome.ChromeDriverExtensions" Version="1.2.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.29.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Lib">
+      <HintPath>..\..\..\Me\_Template\WebCh\bin\Debug\netstandard2.0\Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="WebCh">
+      <HintPath>..\..\..\Me\_Template\WebCh\bin\Debug\netstandard2.0\WebCh.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+    <Resource Include="Images\start.png" />
+    <Resource Include="Images\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
